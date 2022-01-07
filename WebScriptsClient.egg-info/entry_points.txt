@@ -1,0 +1,3 @@
+[console_scripts]
+WebScriptsClient = WebScriptsClient:main
+

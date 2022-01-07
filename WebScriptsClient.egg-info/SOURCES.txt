@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+WebScriptsClient.py
+setup.py
+WebScriptsClient.egg-info/PKG-INFO
+WebScriptsClient.egg-info/SOURCES.txt
+WebScriptsClient.egg-info/dependency_links.txt
+WebScriptsClient.egg-info/entry_points.txt
+WebScriptsClient.egg-info/top_level.txt
