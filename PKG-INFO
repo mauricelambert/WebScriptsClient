@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: WebScriptsClient
-Version: 0.0.1
+Version: 0.0.2
 Summary:  This package implements the "official" WebScripts client. This package implements client for default WebScripts features. 
 Home-page: https://github.com/mauricelambert/WebScriptsClient
 Author: Maurice Lambert
@@ -8,9 +8,9 @@ Author-email: mauricelambert434@gmail.com
 Maintainer: Maurice Lambert
 Maintainer-email: mauricelambert434@gmail.com
 License: GPL-3.0 License
-Project-URL: Documentation, https://mauricelambert.github.io/info/python/security/WebScriptsClient.html
-Project-URL: Executable, https://mauricelambert.github.io/info/python/security/WebScriptsClient.pyz
-Keywords: WebScripts,Client
+Project-URL: Documentation, https://mauricelambert.github.io/info/python/code/WebScriptsClient.html
+Project-URL: Executable, https://mauricelambert.github.io/info/python/code/WebScriptsClient.pyz
+Keywords: WebScripts,Client,API,CLI
 Platform: Windows
 Platform: Linux
 Platform: MacOS
@@ -25,7 +25,7 @@ Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
 
-![WebScripts logo](https://mauricelambert.github.io/info/python/security/WebScripts_small.png "WebScripts logo")
+![WebScripts Logo](https://mauricelambert.github.io/info/python/code/WebScripts/small_logo.png "WebScripts logo")
 
 # WebScriptsClient
 
@@ -133,9 +133,9 @@ client.request("Access", "I need access to test_config.py", "Maurice LAMBERT", e
 ## Links
 
  - [Github Page](https://github.com/mauricelambert/WebScriptsClient/)
- - [Documentation](https://mauricelambert.github.io/info/python/security/WebScriptsClient.html)
+ - [Documentation](https://mauricelambert.github.io/info/python/code/WebScriptsClient.html)
  - [Pypi package](https://pypi.org/project/WebScriptsClient/)
- - [Executable](https://mauricelambert.github.io/info/python/security/WebScriptsClient.pyz)
+ - [Executable](https://mauricelambert.github.io/info/python/code/WebScriptsClient.pyz)
 
 ## Help
 

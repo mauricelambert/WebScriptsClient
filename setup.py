@@ -15,8 +15,8 @@ setup(
     long_description_content_type="text/markdown",
     url=package.__url__,
     project_urls={
-        "Documentation": "https://mauricelambert.github.io/info/python/security/WebScriptsClient.html",
-        "Executable": "https://mauricelambert.github.io/info/python/security/WebScriptsClient.pyz",
+        "Documentation": "https://mauricelambert.github.io/info/python/code/WebScriptsClient.html",
+        "Executable": "https://mauricelambert.github.io/info/python/code/WebScriptsClient.pyz",
     },
     classifiers=[
         "Programming Language :: Python",
@@ -36,6 +36,8 @@ setup(
     keywords=[
         "WebScripts",
         "Client",
+        "API",
+        "CLI",
     ],
     platforms=["Windows", "Linux", "MacOS"],
     license=package.__license__,

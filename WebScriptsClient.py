@@ -58,7 +58,7 @@ This package implements client for default WebScripts features.
 >>> print(f"Error: {error}")
 """
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __author__ = "Maurice Lambert"
 __author_email__ = "mauricelambert434@gmail.com"
 __maintainer__ = "Maurice Lambert"

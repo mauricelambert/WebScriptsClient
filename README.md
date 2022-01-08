@@ -1,4 +1,4 @@
-![WebScripts logo](https://mauricelambert.github.io/info/python/security/WebScripts_small.png "WebScripts logo")
+![WebScripts Logo](https://mauricelambert.github.io/info/python/code/WebScripts/small_logo.png "WebScripts logo")
 
 # WebScriptsClient
 
@@ -106,9 +106,9 @@ client.request("Access", "I need access to test_config.py", "Maurice LAMBERT", e
 ## Links
 
  - [Github Page](https://github.com/mauricelambert/WebScriptsClient/)
- - [Documentation](https://mauricelambert.github.io/info/python/security/WebScriptsClient.html)
+ - [Documentation](https://mauricelambert.github.io/info/python/code/WebScriptsClient.html)
  - [Pypi package](https://pypi.org/project/WebScriptsClient/)
- - [Executable](https://mauricelambert.github.io/info/python/security/WebScriptsClient.pyz)
+ - [Executable](https://mauricelambert.github.io/info/python/code/WebScriptsClient.pyz)
 
 ## Help
 
