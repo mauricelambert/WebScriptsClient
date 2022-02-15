@@ -16,7 +16,8 @@ setup(
     url=package.__url__,
     project_urls={
         "Documentation": "https://mauricelambert.github.io/info/python/code/WebScriptsClient.html",
-        "Executable": "https://mauricelambert.github.io/info/python/code/WebScriptsClient.pyz",
+        "Python Executable": "https://mauricelambert.github.io/info/python/code/WebScriptsClient.pyz",
+        "Windows Executable": "https://github.com/mauricelambert/WebScriptsClient/releases/download/v0.0.3/WebScriptsClient.exe",
     },
     classifiers=[
         "Programming Language :: Python",

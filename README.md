@@ -108,7 +108,8 @@ client.request("Access", "I need access to test_config.py", "Maurice LAMBERT", e
  - [Github Page](https://github.com/mauricelambert/WebScriptsClient/)
  - [Documentation](https://mauricelambert.github.io/info/python/code/WebScriptsClient.html)
  - [Pypi package](https://pypi.org/project/WebScriptsClient/)
- - [Executable](https://mauricelambert.github.io/info/python/code/WebScriptsClient.pyz)
+ - [Python Executable](https://mauricelambert.github.io/info/python/code/WebScriptsClient.pyz)
+ - [Windows Executable](https://github.com/mauricelambert/WebScriptsClient/releases/download/v0.0.3/WebScriptsClient.exe)
 
 ## Help
 

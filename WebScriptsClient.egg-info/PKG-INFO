@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: WebScriptsClient
-Version: 0.0.3
+Version: 0.0.4
 Summary: This package implements the "official" WebScripts client.
 Home-page: https://github.com/mauricelambert/WebScriptsClient
 Author: Maurice Lambert
@@ -9,7 +9,8 @@ Maintainer: Maurice Lambert
 Maintainer-email: mauricelambert434@gmail.com
 License: GPL-3.0 License
 Project-URL: Documentation, https://mauricelambert.github.io/info/python/code/WebScriptsClient.html
-Project-URL: Executable, https://mauricelambert.github.io/info/python/code/WebScriptsClient.pyz
+Project-URL: Python Executable, https://mauricelambert.github.io/info/python/code/WebScriptsClient.pyz
+Project-URL: Windows Executable, https://github.com/mauricelambert/WebScriptsClient/releases/download/v0.0.3/WebScriptsClient.exe
 Keywords: WebScripts,Client,API,CLI
 Platform: Windows
 Platform: Linux
@@ -135,7 +136,8 @@ client.request("Access", "I need access to test_config.py", "Maurice LAMBERT", e
  - [Github Page](https://github.com/mauricelambert/WebScriptsClient/)
  - [Documentation](https://mauricelambert.github.io/info/python/code/WebScriptsClient.html)
  - [Pypi package](https://pypi.org/project/WebScriptsClient/)
- - [Executable](https://mauricelambert.github.io/info/python/code/WebScriptsClient.pyz)
+ - [Python Executable](https://mauricelambert.github.io/info/python/code/WebScriptsClient.pyz)
+ - [Windows Executable](https://github.com/mauricelambert/WebScriptsClient/releases/download/v0.0.3/WebScriptsClient.exe)
 
 ## Help
 
