@@ -1,2 +1,5 @@
 include *.md
 include *.txt
+include *.spec
+include *.bat
+include *.ico

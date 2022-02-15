@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: WebScriptsClient
-Version: 0.0.2
-Summary:  This package implements the "official" WebScripts client. This package implements client for default WebScripts features. 
+Version: 0.0.3
+Summary: This package implements the "official" WebScripts client.
 Home-page: https://github.com/mauricelambert/WebScriptsClient
 Author: Maurice Lambert
 Author-email: mauricelambert434@gmail.com

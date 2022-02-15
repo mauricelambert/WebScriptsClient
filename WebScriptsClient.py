@@ -23,6 +23,37 @@
 This package implements the "official" WebScripts client.
 This package implements client for default WebScripts features.
 
+Basic:
+
+~# python -m WebScriptsClient -u Admin -p Admin exec "show_license.py" http://127.0.0.1:8000/web/auth/
+
+ExitCode: 1
+Errors: USAGE: show_license.py [part required string]
+
+~# python -m WebScriptsClient -u Admin -p Admin exec "show_license.py copyright" http://127.0.0.1:8000/web/auth/
+
+WebScripts  Copyright (C) 2021, 2022  Maurice Lambert
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it
+under certain conditions.
+
+
+ExitCode: 0
+Errors:
+
+~# python -m WebScriptsClient -u Admin -p Admin exec "show_license.py copyright error" http://127.0.0.1:8000/web/auth/
+
+WebScripts  Copyright (C) 2021, 2022  Maurice Lambert
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it
+under certain conditions.
+
+
+ExitCode: 2
+Errors: ERROR: unexpected arguments ['error']
+
+Full examples:
+
 ~# python WebScriptsClient.py -v -u Admin -p Admin test http://127.0.0.1:8000/web/
 
 ~# python WebScriptsClient.py -v -u Admin -p Admin download -f "LICENSE.txt" "LICENSE.txt" http://127.0.0.1:8000/web/
@@ -41,6 +72,9 @@ This package implements client for default WebScripts features.
 ~# python -c "print('test')" > test.txt
 ~# python WebScriptsClient.py -v -u Admin -p Admin exec "test_config.py" -I test.txt http://127.0.0.1:8000/web/
 ~# python WebScriptsClient.py -v -u Admin -p Admin exec "test_config.py --test test3 --test4 -t" -i "test1" "test2" http://127.0.0.1:8000/web/
+~# python -m WebScriptsClient -u Admin -p Admin exec password_generator.py http://127.0.0.1:8000/web/auth/
+~# python -m WebScriptsClient -u Admin -p Admin exec "show_license.py license" http://127.0.0.1:8000/web/auth/
+~# python -m WebScriptsClient -u Admin -p Admin exec "show_license.py copyright codeheader" http://127.0.0.1:8000/web/auth/
 
 ~# python WebScriptsClient.py -v info http://127.0.0.1:8000/web/
 ~# python WebScriptsClient.py -a AdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdminAdmin info -a -c -d -s "test_config.py" "/auth/" http://127.0.0.1:8000/web/
@@ -58,7 +92,7 @@ This package implements client for default WebScripts features.
 >>> print(f"Error: {error}")
 """
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 __author__ = "Maurice Lambert"
 __author_email__ = "mauricelambert434@gmail.com"
 __maintainer__ = "Maurice Lambert"
@@ -231,7 +265,8 @@ class WebScriptsOpener(HTTPDefaultErrorHandler, HTTPRedirectHandler):
         log = f"HTTP error {code}: {message} -> you do not have permissions."
         url = request.get_full_url()
         command = (
-            f"{argv[0]} request -n [name] -t Access -r"
+            f"{argv[0]} [(-a <KEY>|-A|-u <USER> -p <PASSWORD>|-u -P)]"
+            " request -n [name] -s Access -r"
             f' "I need access to this script." {url}'
         )
         logger_error(log)
@@ -280,7 +315,8 @@ class WebScriptsOpener(HTTPDefaultErrorHandler, HTTPRedirectHandler):
         log = f"HTTP error {code}: {message} -> you do not have permissions."
         url = request.get_full_url()
         command = (
-            f"{argv[0]} request -n [name] -t Access -r"
+            f"{argv[0]} [(-a <KEY>|-A|-u <USER> -p <PASSWORD>|-u -P)]"
+            " request -n [name] -s Access -r"
             f' "I need access to this script." {url}'
         )
         logger_error(log)
@@ -1179,7 +1215,16 @@ def cli_request(args: Namespace) -> None:
     logger_debug("Authenticate the WebScriptsClient...")
     client.auth()
 
-    client.request(args.subject, args.request, args.name, args.error_code)
+    try:
+        client.request(args.subject, args.request, args.name, args.error_code)
+    except WebScriptsPermissionsError:
+        log = (
+            "Please, retry with authentication. "
+            "An authentication is required on this server."
+        )
+        logger_error(log)
+        print(log)
+
     logger_debug("Request sent without error.")
 
 
